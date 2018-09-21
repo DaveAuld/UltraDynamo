@@ -1,10 +1,8 @@
 ﻿UltraDynamo
 -----------
-
 Author: David Auld
 Copyright: David Auld ©2012
 Website: http://www.dave-auld.net/
-Email: dave@dave-auld.net
 
 Version: 1.1.0.0 - Date: 14th December 2012
 -------------------------------------------
