@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DE80AFC-79A3-432C-870C-9F48D4761F3B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UltraDynamo</RootNamespace>
+    <AssemblyName>UltraDynamo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BBECEB0AAF64C3B87E46588DD4D0DB3EFB2A5EDD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1352829907_line_graph.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AquaGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AquaGauge.designer.cs">
+      <DependentUpon>AquaGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UICompassFull.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UICompassFull.Designer.cs">
+      <DependentUpon>UICompassFull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UICompassHeadingLetters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UICompassHeadingLetters.Designer.cs">
+      <DependentUpon>UICompassHeadingLetters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UIInclinometer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UIInclinometer.Designer.cs">
+      <DependentUpon>UIInclinometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UITrendHorizontal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UITrendHorizontal.Designer.cs">
+      <DependentUpon>UITrendHorizontal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormAccelerometerGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormAccelerometerGauge.Designer.cs">
+      <DependentUpon>FormAccelerometerGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormCompassHeadingLetters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormCompassHeadingLetters.Designer.cs">
+      <DependentUpon>FormCompassHeadingLetters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormGyrometerGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormGyrometerGauge.Designer.cs">
+      <DependentUpon>FormGyrometerGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormHorizontalTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormHorizontalTrend.Designer.cs">
+      <DependentUpon>FormHorizontalTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormInclinometer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormInclinometer.Designer.cs">
+      <DependentUpon>FormInclinometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormInclinometerGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormInclinometerGauge.Designer.cs">
+      <DependentUpon>FormInclinometerGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormSpeedometerGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormSpeedometerGauge.Designer.cs">
+      <DependentUpon>FormSpeedometerGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormContentNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContentNotice.Designer.cs">
+      <DependentUpon>FormContentNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\SpeedConstants.cs" />
+    <Compile Include="Misc\WeightConstants.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sensors\EventArgs\AccelerometerReadingEventArgs.cs" />
+    <Compile Include="Sensors\EventArgs\AvailableEventArgs.cs" />
+    <Compile Include="Sensors\EventArgs\CompassReadingEventArgs.cs" />
+    <Compile Include="Sensors\EventArgs\GeoLocationReadingEventArgs.cs" />
+    <Compile Include="Sensors\EventArgs\GyrometerReadingEventArgs.cs" />
+    <Compile Include="Sensors\EventArgs\InclinometerReadingEventArgs.cs" />
+    <Compile Include="Sensors\EventArgs\LightReadingEventArgs.cs" />
+    <Compile Include="Sensors\MyAccelerometer.cs" />
+    <Compile Include="Sensors\MyCompass.cs" />
+    <Compile Include="Sensors\MyGeoLocation.cs" />
+    <Compile Include="Sensors\MyGyrometer.cs" />
+    <Compile Include="Sensors\MyInclinometer.cs" />
+    <Compile Include="Sensors\MyLightSensor.cs" />
+    <Compile Include="Sensors\MySensorBase.cs" />
+    <Compile Include="Sensors\MySensorManager.cs" />
+    <Compile Include="Sensors\EventArgs\SimulatedEventArgs.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SimulateForms\FormSimulateCompass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateCompass.Designer.cs">
+      <DependentUpon>FormSimulateCompass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateInclinometer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateInclinometer.Designer.cs">
+      <DependentUpon>FormSimulateInclinometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateGyrometer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateGyrometer.Designer.cs">
+      <DependentUpon>FormSimulateGyrometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateAccelerometer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateAccelerometer.Designer.cs">
+      <DependentUpon>FormSimulateAccelerometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateLightSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulateForms\FormSimulateLightSensor.Designer.cs">
+      <DependentUpon>FormSimulateLightSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayForms\FormCompassFull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayForms\FormCompassFull.Designer.cs">
+      <DependentUpon>FormCompassFull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\FormTaskReactionTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\FormTaskReactionTimer.Designer.cs">
+      <DependentUpon>FormTaskReactionTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\FormTaskZeroToX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\FormTaskZeroToX.Designer.cs">
+      <DependentUpon>FormTaskZeroToX.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\AquaGauge.resx">
+      <DependentUpon>AquaGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UICompassFull.resx">
+      <DependentUpon>UICompassFull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UICompassHeadingLetters.resx">
+      <DependentUpon>UICompassHeadingLetters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UIInclinometer.resx">
+      <DependentUpon>UIInclinometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UITrendHorizontal.resx">
+      <DependentUpon>UITrendHorizontal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormAccelerometerGauge.resx">
+      <DependentUpon>FormAccelerometerGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormCompassHeadingLetters.resx">
+      <DependentUpon>FormCompassHeadingLetters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormGyrometerGauge.resx">
+      <DependentUpon>FormGyrometerGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormHorizontalTrend.resx">
+      <DependentUpon>FormHorizontalTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormInclinometer.resx">
+      <DependentUpon>FormInclinometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormInclinometerGauge.resx">
+      <DependentUpon>FormInclinometerGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormSpeedometerGauge.resx">
+      <DependentUpon>FormSpeedometerGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContentNotice.resx">
+      <DependentUpon>FormContentNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SimulateForms\FormSimulateCompass.resx">
+      <DependentUpon>FormSimulateCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulateForms\FormSimulateInclinometer.resx">
+      <DependentUpon>FormSimulateInclinometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulateForms\FormSimulateGyrometer.resx">
+      <DependentUpon>FormSimulateGyrometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulateForms\FormSimulateAccelerometer.resx">
+      <DependentUpon>FormSimulateAccelerometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulateForms\FormSimulateLightSensor.resx">
+      <DependentUpon>FormSimulateLightSensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayForms\FormCompassFull.resx">
+      <DependentUpon>FormCompassFull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\FormTaskReactionTimer.resx">
+      <DependentUpon>FormTaskReactionTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\FormTaskZeroToX.resx">
+      <DependentUpon>FormTaskZeroToX.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\compass_200x200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\inclinometer_pitch.jpg" />
+    <EmbeddedResource Include="Images\inclinometer_roll.jpg" />
+    <EmbeddedResource Include="Images\inclinometer_yaw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1352829907_line_graph.ico" />
+    <Content Include="ChangeLog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReadMe.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
