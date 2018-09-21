@@ -41,7 +41,6 @@ Important Information
 
 5) Please use the application responsibly, do not allow yourself to become distracted whilst driving a motor vehicle.
 
-Please send any feedback, bug information, suggestions to dave@dave-auld.net, or visit http://www.dave-auld.net/
 
 Thanks.
 Dave
