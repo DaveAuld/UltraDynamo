@@ -4,8 +4,6 @@
 Author: David Auld
 Copyright: David Auld ©2012
 Website: http://www.dave-auld.net/
-Email: dave@dave-auld.net
-
 
 Current Version: 1.1.0.0
 Release Date: 14th December 2012
