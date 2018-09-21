@@ -2,7 +2,7 @@
 ----
 ### Rolling road for the open road.
 
-UltraDynamo was an entry into the 2012 Intel AppInnovation competition. Wish was ultimately aimed at showcasing the new sensor technologies that were being built into the new 'ultrabook' specification at the time.
+UltraDynamo was an entry into the 2012 Intel AppInnovation competition. The competition was ultimately aimed at showcasing the new sensor technologies that were being built into the new 'ultrabook' specification at the time.
 
 The first part of the competition was to submit a proposal to the competition. This was reviewed by the panel and a number of entries were selected, and received prototype ultrabooks from intel for developing the app on.
 
